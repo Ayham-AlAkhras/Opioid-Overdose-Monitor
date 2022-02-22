@@ -1,0 +1,56 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Emergency Contacts"
+        app:icon="@drawable/ic_baseline_person_24">
+
+        <EditTextPreference
+            app:key="contact1"
+            app:title="Emergency Contact 1 (Call and text)"
+            app:useSimpleSummaryProvider="true"
+            android:inputType="number"
+            />
+
+        <EditTextPreference
+            app:key="contact2"
+            app:title="Emergency Contact 2 (Text only)"
+            app:useSimpleSummaryProvider="true"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Action"
+        app:icon="@drawable/ic_baseline_perm_phone_msg_24">
+
+        <SwitchPreferenceCompat
+            app:key="call"
+            app:title="Call" />
+
+        <SwitchPreferenceCompat
+            app:key="sms"
+            app:title="SMS" />
+
+        <SwitchPreferenceCompat
+            app:key="location"
+            app:dependency="sms"
+            app:title="Location"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Alarm"
+        app:icon="@drawable/ic_baseline_notifications_active_24">
+
+        <SwitchPreferenceCompat
+            app:key="vibration"
+            app:title="Vibration" />
+
+        <SwitchPreferenceCompat
+            app:key="sound"
+            app:title="Sound" />
+
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
